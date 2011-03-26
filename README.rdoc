@@ -9,9 +9,19 @@ Add the gem to your Gemfile.
 
     gem 'backup-task'
 
+Create a backup configuration file in config/backup.rb, with a trigger called
+db_backup.  See https://github.com/meskyanichi/backup/wiki/Getting-Started for
+details.  Be sure to move the resulting file to config/backup.rb within your
+Rails app and to name your trigger 'db_backup'.
+
 Once you've done a 'bundle install' you should be able to run the backup task
 
     rake db:backup    
+
+This will back up your database according to the configuration in 
+config/backup.rb.  It will use the tmp, log, and db directories from your
+Rails app to avoid conflicting with any other backups happening on the same
+system.
 
 == Fixing
 
