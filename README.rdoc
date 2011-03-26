@@ -1,0 +1,29 @@
+= Backup Task
+
+A simple rake task for backing up a Rails 3 application's database using
+the Backup gem.
+
+== Using
+
+Add the gem to your Gemfile.
+
+    gem 'backup-task'
+
+Once you've done a 'bundle install' you should be able to run the backup task
+
+    rake db:backup    
+
+== Fixing
+
+Bug reports, pull requests, etc are welcome at
+http://github.com/edebill/backup-task  or you can email the 
+author at erik@debill.org.
+
+
+
+== Copyright
+
+Copyright (c) 2011 Erik DeBill. See LICENSE.txt for
+further details.
+
+
