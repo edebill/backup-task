@@ -16,13 +16,14 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/edebill/backup-task"
   gem.license = "MIT"
   gem.summary = %Q{db:backup rake task}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Provides a db:backup rake task designed to work within a Rails app.}
   gem.email = "erik@debill.org"
   gem.authors = ["Erik DeBill"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
+  gem.add_runtime_dependency 'backup', '~> 3.0.9'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.files += Dir['lib/tasks/**/*.rake']
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -33,12 +34,12 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
+#require 'rcov/rcovtask'
+#Rcov::RcovTask.new do |test|
+#  test.libs << 'test'
+#  test.pattern = 'test/**/test_*.rb'
+#  test.verbose = true
+#end
 
 task :default => :test
 
