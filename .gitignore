@@ -11,3 +11,5 @@ tmp/**/*
 Gemfile.lock
 pkg/**/*
 rdoc/**/*
+pkg
+rdoc
